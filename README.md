@@ -28,5 +28,17 @@ Initial setup done today. Datasets and experiments will follow soon.
 - [ ] Perform exploratory data analysis (EDA)  
 - [ ] Train baseline anomaly detection model  
 - [ ] Add visualization of anomalies  
-- [ ] Build Streamlit demo  
+- [ ] Build Streamlit demo
+
+## 📊 Data Cleaning Example (Python)
+
+This script demonstrates basic data cleaning using **pandas**:
+- Handling missing values
+- Filling gaps with mean values or placeholders
+- Exporting cleaned data to CSV
+
+Run with:
+```bash
+python basic_data_cleaning.py
+
 
