@@ -53,3 +53,40 @@ plt.title("Top 5 Users by Transaction Count")
 plt.xlabel("User ID")
 plt.ylabel("Number of Transactions")
 plt.show()
+
+
+
+
+# Titanic Dataset EDA
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load dataset directly from an online source
+url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
+titanic = pd.read_csv(url)
+
+# First look at the data
+print("Shape of dataset:", titanic.shape)
+print("\nFirst 5 rows:\n", titanic.head())
+print("\nInfo:\n")
+print(titanic.info())
+
+# Basic statistics
+print("\nDescriptive statistics:\n", titanic.describe())
+
+# Count of survived vs not survived
+plt.figure(figsize=(6,4))
+titanic['Survived'].value_counts().plot(kind='bar')
+plt.title("Survival Count")
+plt.xlabel("0 = Not Survived, 1 = Survived")
+plt.ylabel("Count")
+plt.show()
+
+# Distribution of passengers by class
+plt.figure(figsize=(6,4))
+titanic['Pclass'].value_counts().plot(kind='bar')
+plt.title("Passenger Class Distribution")
+plt.xlabel("Class (1 = Upper, 2 = Middle, 3 = Lower)")
+plt.ylabel("Count")
+plt.show()
